@@ -1,10 +1,20 @@
 package by.dobysh.customsort.parser;
 
-public class DataParser {
-    public static final String REGEX_NEW_LINE = "\\n";
+import java.util.ArrayList;
+import java.util.List;
 
-    public String[] parseByRow(String inputString) {
-        return inputString.trim().split(REGEX_NEW_LINE);
+public class DataParser {
+
+    public static final String REGEX_NEW_ELEMENT = "\\t";
+
+
+    public List<String[]> parseByCol(List<String> inputListString) {
+        List<String[]> paesedList = new ArrayList<>();
+        for (String line : inputListString) {
+            String[] elements = line.split(REGEX_NEW_ELEMENT);
+            paesedList.add(elements);
+        }
+        return paesedList;
     }
 
 }

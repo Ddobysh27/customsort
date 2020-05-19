@@ -1,17 +1,17 @@
 package by.dobysh.customsort;
 
 import by.dobysh.customsort.parser.DataParser;
-import by.dobysh.customsort.process.CustomComparator;
+import by.dobysh.customsort.process.CustomComparatorArrayString;
 import by.dobysh.customsort.reader.ReaderData;
 import by.dobysh.customsort.reader.ReaderDataFile;
 import by.dobysh.customsort.writer.WriterData;
 import by.dobysh.customsort.writer.WriterDataFile;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class App {
 
-    private static final String dataFilePathInput = "data/in.txt";
+    private static final String dataFilePathInput = "data/1.txt";
     private static final String dataFilePathOutput = "data/out.txt";
 
     public static void main(String[] args) {
@@ -20,15 +20,13 @@ public class App {
         WriterData writerData = new WriterDataFile();
         DataParser dataParser = new DataParser();
 
-        String sourceData = readerData.readDataToString(dataFilePathInput);
+        List<String> stringList = readerData.readDataToListString(dataFilePathInput);
 
-        String[] parsed = dataParser.parseByRow(sourceData);
+        List<String[]> parsedList = dataParser.parseByCol(stringList);
 
-        //sort
-        Arrays.sort(parsed, new CustomComparator());
+        parsedList.sort(new CustomComparatorArrayString());
 
-        writerData.writeData(dataFilePathOutput, parsed);
-
+        writerData.writeData(dataFilePathOutput, parsedList);
 
     }
 

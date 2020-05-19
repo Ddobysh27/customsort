@@ -1,8 +1,10 @@
-01	fsdjj1	sdfna
-O11	he101	hjjl
-O11	he101	lllll
-O11	he101o	fasfdsa
-a11	gfafd	fdsd
-o11	he101
-q2	q2	dfs
-q2	q202	gdfsgsd
+
+	
+-22	-3	4	
+-22	11	abc	
+-22	1234234	asdfasf	asdgas	
+-2.2	2	3	4	
+-1.1	
+2.2	12345q	69	-afg	
+2.2	12345q	69	-asdf	
+qqqq	1.1	

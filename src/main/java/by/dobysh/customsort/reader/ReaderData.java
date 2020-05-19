@@ -1,6 +1,8 @@
 package by.dobysh.customsort.reader;
 
+import java.util.List;
+
 public interface ReaderData {
 
-    String readDataToString(String filePath);
+    List<String> readDataToListString(String filePath);
 }

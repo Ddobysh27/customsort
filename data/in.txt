@@ -1,8 +1,41 @@
+1
+3
 01	fsdjj1	sdfna
 q2	q2	dfs
 q2	q202	gdfsgsd
 O11	he101	hjjl
 O11	he101o	fasfdsa
 o11	he101
-O11	he101	lllll
+O11	he101	pppppp
 a11	gfafd	fdsd
+1.1
+1
+15
+2
+0
+01
+0001
+-1.1
+-1
+-15
+-2
+-0
+-01
+-0001
+sdf37dsf3383 df
+sdf37dsf3383 dfs
+!
+@
+#
+$
++0
++1
++-1
++0
++1
++-1
++--1
++--0
++-f
++-a
++--a
