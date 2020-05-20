@@ -14,13 +14,24 @@ public class CustomComparatorArrayString implements Comparator<String[]> {
 
         int result = 0;
 
-        for (int i = 0; i < lim; i++) {
-            result = new CustomComparatorString().compare(s1[i], s2[i]);
-            if (result != 0) {
-                return result;
+
+
+            for (int i = 0; i < lim; i++) {
+                result = new CustomComparatorString().compare(s1[i], s2[i]);
+                if (result != 0) {
+                    return result;
+                }
             }
-        }
 
         return s1Length - s2Length;
     }
+
+//    private boolean isDigit(String str) {
+//        return str.length() > 0 &&
+//                Character.isDigit(str.charAt(0)) ||
+//                (str.charAt(0) == '-' &&
+//                        str.length() > 1 &&
+//                        Character.isDigit(str.charAt(1)));
+//    }
+
 }

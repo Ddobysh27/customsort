@@ -41,8 +41,15 @@ public class CustomComparatorString implements Comparator<String> {
 
         int s1Marker = 0;
         int s2Marker = 0;
-        int s1Length = s1.length();
+        int s1Length = s1.length(); // 0
         int s2Length = s2.length();
+
+        if (s1Length == 0 && s2Length > 0 && isDigit(s2)) {
+            return 1;
+        } else if (s2Length == 0 && s1Length > 0 && isDigit(s1)) {
+            return -1;
+        }
+
 
         // if both parts are not empty
         while (s1Marker < s1.length() && s2Marker < s2.length()) {
@@ -78,5 +85,15 @@ public class CustomComparatorString implements Comparator<String> {
 
         return s1Length - s2Length;
     }
+
+
+    private boolean isDigit(String str) {
+        return str.length() > 0 &&
+                Character.isDigit(str.charAt(0)) ||
+                (str.charAt(0) == '-' &&
+                        str.length() > 1 &&
+                        Character.isDigit(str.charAt(1)));
+    }
+
 
 }

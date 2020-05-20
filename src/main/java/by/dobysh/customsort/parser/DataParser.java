@@ -11,7 +11,7 @@ public class DataParser {
     public List<String[]> parseByCol(List<String> inputListString) {
         List<String[]> paesedList = new ArrayList<>();
         for (String line : inputListString) {
-            String[] elements = line.split(REGEX_NEW_ELEMENT);
+            String[] elements = line.split(REGEX_NEW_ELEMENT, -1);
             paesedList.add(elements);
         }
         return paesedList;
